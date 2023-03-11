@@ -41,10 +41,10 @@ def bag_of_words(tokenized_sentence, words):
     return bag
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-with open('healthcarechatbot/intents.json', 'r') as json_data:
+with open('chatbot/intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = os.path.join(os.getcwd(), 'healthcarechatbot/NeuralNet.pth')
+FILE = os.path.join(os.getcwd(), 'chatbot/NeuralNet.pth')
 data = torch.load(FILE)
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
