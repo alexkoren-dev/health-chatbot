@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from pickle import FALSE
 from . info import *
 import os
 
@@ -32,9 +33,9 @@ EMAIL_PORT = EMAIL_PORT
 SECRET_KEY = "django-insecure-i)*@lywa!jr6)2stps#a226m=^w9^nl8@njy1-krd9m8eyxjec"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = FALSE
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
