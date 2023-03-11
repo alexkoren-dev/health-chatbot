@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>register form</title>
+   <link rel="stylesheet" href="{%static 'css/form.css'%}">
+   <style></style>
+   
+</head>
+<body>
+   <div class="form-container">
+      <form method="post" action="/register">
+        {% csrf_token %}
+      <h3>register now</h3>
+     {% for message in messages %}
+      <span class="error-msg">{{ message }}</span>
+      {% endfor %}
+      <input type="text" name="username" required placeholder="enter your Username">
+      <input type="text" name="fname" required placeholder="enter your First Name">
+      <input type="text" name="lname" required placeholder="enter your Last Name">
+      <input type="email" name="email" required placeholder="enter your Email">
+      <input type="password" name="pass1" required placeholder="enter your Password">
+      <input type="password" name="pass2" required placeholder="confirm your Password">
+      <button type="submit" name="submit" value="register now" class="form-btn" >Submit</button>
+      <p>already have an account? <a href="{% url 'login' %}">login now</a></p>
+
+   </form>
+</div>
+</div>
+</body>
+</html>

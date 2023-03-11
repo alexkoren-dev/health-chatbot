@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+ Welcome to GFG - Django Login!!
+ Hello {{ name }}!!
+ Please confirm your email by clicking on the following link.
+
+ {% comment %} Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %}  {% endcomment %}
+ Confirmation Link:  http://KiranChatbot.pythonanywhere.com{% url 'activate' uidb64=uid token=token %}
+ {% comment %} http://keyrun.pythonanywhere.com{% url 'activate' uidb64=uid token=token %} {% endcomment %}
+
+ {% endautoescape %}
